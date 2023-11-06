@@ -11,6 +11,7 @@
     },
     "dependencies": {
         "@cn-ui/reactive": "^2.3.0",
+        "jszip": "^3.10.1",
         "lodash-es": "^4.17.21",
         "pixelmatch": "^5.3.0",
         "pngjs": "^7.0.0",
@@ -20,6 +21,7 @@
     "devDependencies": {
         "@konghayao/cn-font-split": "workspace:",
         "@playwright/test": "^1.39.0",
+        "@types/pngjs": "^6.0.3",
         "@types/shelljs": "^0.8.14",
         "vite": "^4.4.5",
         "vite-plugin-solid": "^2.7.0"

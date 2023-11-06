@@ -11,9 +11,11 @@ const command = (input, output, text) => `hb-subset --font-file=${input} --outpu
 // fs.emptyDirSync('./temp');
 for (const i of features) {
     const head = `./temp/${i.featureKey}/${i.featureKey}`
-    const buffer = fs.readFileSync(head + `.woff2`)
+    const buffer = fs.readFileSync(
+        head +
+        i.fontLink.replace(/.*\.(.*?)/g, '.$1'),
+    );
     const b = await convert(new Uint8Array(buffer), 'ttf');
-    fs.writeFileSync(head + `.ttf`, b)
-    shelljs.exec(command(head + ".ttf", head + '-hb.ttf', i.splitText))
-
+    fs.writeFileSync(head + `_hb.ttf`, b)
+    shelljs.exec(command(head + "_hb.ttf", head + '-hb.ttf', i.splitText))
 }
