@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 importers:
 
   .:
@@ -1415,7 +1419,7 @@ packages:
       rollup:
         optional: true
     dependencies:
-      '@types/estree': 1.0.1
+      '@types/estree': 1.0.5
       estree-walker: 2.0.2
       picomatch: 2.3.1
       rollup: 3.29.4
@@ -6337,7 +6341,3 @@ packages:
       compress-commons: 5.0.1
       readable-stream: 3.6.2
     dev: true
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
